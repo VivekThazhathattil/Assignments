@@ -1,0 +1,944 @@
+\documentclass[12pt,letterpaper,fleqn]{article}
+\usepackage[utf8]{inputenc}	
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{multirow,booktabs}
+\usepackage[table]{xcolor}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{setspace}
+\usepackage{calc}
+\usepackage{multicol}
+\usepackage{cancel}
+\usepackage[margin=3cm]{geometry}
+\usepackage{floatrow}
+\newlength{\tabcont}
+\addtolength{\jot}{10pt}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+\title{Assignment 0 - Vivek T, 17397}
+\newcommand\course{17397}	
+\newcommand\semester{2021} 
+\newcommand\yourname{Vivek T}  
+\theoremstyle{definition}
+\usepackage{mathtools}
+\DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
+\newtheorem{defn}{Definición}
+\newtheorem{reg}{Regla}
+\newtheorem{ejer}{EJERCICIO}
+\pagestyle{fancyplain}
+\headheight 32pt
+\lhead{\yourname\ \vspace{0.1cm} \\ \course}
+\chead{\textbf{\Large DS284 Assignment-0}}
+\rhead{16/08/2021}
+\begin{document}
+(1.a) Given:
+
+\begin{equation}
+\mathbb{V} = 
+\set[\Bigg]{
+\begin{pmatrix}
+w\\
+x\\
+y\\
+z\\
+\end{pmatrix}
+\given w - x - y + z = 0; w,x,y,z \in \mathbb{R}}
+\end{equation}
+
+Consider three vectors $u_1$, $u_2$ and $u_3$ such that $u_1, u_2, u_3 \in \mathbb{V}$.\\
+Let 
+\begin{equation*}
+u_1 =
+\begin{pmatrix}
+w_1\\
+x_1\\
+y_1\\
+z_1
+\end{pmatrix}\texttt{,}~
+u_2 = 
+\begin{pmatrix}
+w_2\\
+x_2\\
+y_2\\
+z_2
+\end{pmatrix}~\texttt{and}~
+u_3 = 
+\begin{pmatrix}
+w_3\\
+x_3\\
+y_3\\
+z_3
+\end{pmatrix}
+\end{equation*}
+Checking for the conditions necessary for satisfying a real vector space,
+\begin{enumerate}
+\item Closure under addition property:
+\begin{equation*}
+\begin{split}
+&u_1 + u_2 = 
+\begin{pmatrix}
+w_1 + w_2\\
+x_1 + x_2\\
+y_1 + y_2\\
+z_1 + z_2
+\end{pmatrix}\\
+&(w_1 + w_2) -(x_1 + x_2) - (y_1 + y_2) + (z_1 + z_2)\\
+&= (w_1 - x_1 - y_1 + z_1) + (w_2 - x_2 - y_2 + z_2)
+\end{split}
+\end{equation*}
+Since $u_1,~u_2 \in \mathbb{V}$, $(w_1 - x_1 - y_1 + z_1) = 0 ~\texttt{and}~(w_2 - x_2 - y_2 + z_2) = 0$.
+\begin{equation*}
+\begin{split}
+&\implies (w_1 - x_1 - y_1 + z_1) + (w_2 - x_2 - y_2 + z_2) = 0\\
+&\implies u_1 + u_2 \in \mathbb{V}
+\end{split}
+\end{equation*}
+Thus the closure under addition property is satisfied.\\
+
+\item Commutative property
+\begin{equation*}
+\begin{split}
+u_1 + u_2 &= 
+\begin{pmatrix}
+w_1 + w_2\\
+x_1 + x_2\\
+y_1 + y_2\\
+z_1 + z_2
+\end{pmatrix}\\
+&= \begin{pmatrix}
+w_2 + w_1\\
+x_2 + x_1\\
+y_2 + y_1\\
+z_2 + z_1
+\end{pmatrix} ~\because~ w,x,y,z \in \mathbb{R} \texttt{ obeys commutativity}\\
+&= \begin{pmatrix}
+w_2\\
+x_2\\
+y_2\\
+z_2 
+\end{pmatrix} + 
+\begin{pmatrix}
+w_1\\
+x_1\\
+y_1\\
+z_1 
+\end{pmatrix}\\
+&= u_2 + u_1
+\end{split}
+\end{equation*}
+Hence commutativity is satisfied.
+
+\item Associative property
+\begin{equation*}
+\begin{split}
+u_1 + (u_2 + u_3) &=
+\begin{pmatrix}
+w_1\\
+x_1\\
+y_1\\
+z_1
+\end{pmatrix} +
+\begin{pmatrix}
+w_2 + w_3\\
+x_2 + x_3\\
+y_2 + y_3\\
+z_2 + z_3
+\end{pmatrix}\\
+&= \begin{pmatrix}
+w_1 + w_2 + w_3\\
+x_1 + x_2 + x_3\\
+y_1 + y_2 + y_3\\
+z_1 + z_2 + z_3
+\end{pmatrix}\\
+&= \begin{pmatrix}
+w_1 + w_2\\
+x_1 + x_2\\
+y_1 + y_2\\
+z_1 + z_2
+\end{pmatrix} + 
+\begin{pmatrix}
+w_3\\
+x_3\\
+y_3\\
+z_3
+\end{pmatrix}\\
+&= (u_1 + u_2) + u_3
+\end{split}
+\end{equation*}
+Hence associativity is satisfied.
+
+\item Zero vector
+\begin{equation*}
+\begin{split}
+u_1 + 0 &= \begin{pmatrix}
+w_1\\
+x_1\\
+y_1\\
+z_1
+\end{pmatrix} + 
+\begin{pmatrix}
+0\\
+0\\
+0\\
+0
+\end{pmatrix}\\
+&= \begin{pmatrix}
+w_1 + 0\\
+x_1 + 0\\
+y_1 + 0\\
+z+1 + 0
+\end{pmatrix}\\
+&= \begin{pmatrix}
+w_1\\
+x_1\\
+y_1\\
+z_1
+\end{pmatrix}, \because w,x,y,z \in \mathbb{R} \texttt{ obeys additive property}\\
+&= u_1
+\end{split}
+\end{equation*}
+Hence additivity property is satisfied for any $u_1 \in \mathbb{V}$
+
+\item Additive inverse
+$u_1 \in \mathbb{V}$.\\
+ Then $ -1 \cdot u_1 \in \mathbb{V}$,\\
+  since $ w_1 - x_1 - y_1 + z_1 = 0 \implies -1 \cdot w_1 + 1 \cdot x_1 + 1 \cdot y_1 - 1 \cdot z_1 = 0$\\
+   and $ -w_1, -x_1, -y_1, -z_1 \in \mathbb{R}$.\\
+   $\implies \forall u_1 \in \mathbb{V}, \exists -u_1 \in \mathbb{V}$ such that $ u_1  + (-u_1) = 0$, where $-u_1$ is the additive inverse.
+
+\item Closure under scalar Multiplication
+Let $c \in \mathbb{R}$.\\
+Then,
+\begin{equation*}
+\begin{split}
+c \cdot u_1 &= c \cdot \begin{pmatrix}
+w_1\\
+x_1\\
+y_1\\
+z_1
+\end{pmatrix}\\
+&= \begin{pmatrix}
+c \cdot w_1\\
+c \cdot x_1\\
+c \cdot y_1\\
+c \cdot z_1
+\end{pmatrix}\\
+\end{split}
+\end{equation*}
+$\because u_1 \in \mathbb{V}$, $w_1 - x_1 - y_1 + z_1 = 0$.\\
+Multiplying both LHS and RHS by scalar constant $c$,\\
+$ c \cdot (w_1 - x_1 - y_1 + z_1) = 0$.\\
+$ \implies c \cdot w_1 - c \cdot x_1 - c \cdot y_1 + c \cdot z_1 = 0$\\
+$ \implies c \cdot u_1 \in \mathbb{V}$.
+
+\item Distributive property for scalar addition\\
+Let $c,d \in \mathbb{R}$.\\
+Then,
+\begin{equation*}
+\begin{split}
+(c + d)\cdot u_1 &= (c + d) \cdot \begin{pmatrix}
+w_1\\
+x_1\\
+y_1\\
+z_1
+\end{pmatrix}\\
+&= \begin{pmatrix}
+(c + d)\cdot w_1\\
+(c + d)\cdot x_1\\
+(c + d)\cdot y_1\\
+(c + d)\cdot z_1
+\end{pmatrix}\\
+&= \begin{pmatrix}
+c \cdot w_1 + d \cdot w_1\\
+c \cdot x_1 + d \cdot x_1\\
+c \cdot y_1 + d \cdot y_1\\
+c \cdot z_1 + d \cdot z_1
+\end{pmatrix}\\
+&= \begin{pmatrix}
+c \cdot w_1\\
+c \cdot x_1\\
+c \cdot y_1\\
+c \cdot z_1
+\end{pmatrix} +
+\begin{pmatrix}
+d \cdot w_1\\
+d \cdot x_1\\
+d \cdot y_1\\
+d \cdot z_1
+\end{pmatrix}\\
+&= c \cdot \begin{pmatrix}
+w_1\\
+x_1\\
+y_1\\
+z_1
+\end{pmatrix} +
+d \cdot \begin{pmatrix}
+w_1\\
+x_1\\
+y_1\\
+z_1
+\end{pmatrix}\\
+&= c \cdot u_1 + d \cdot u_1
+\end{split}
+\end{equation*}
+\newpage
+\item Distribute property for vector addition
+Let $c \in \mathbb{R}$.\\
+Then,
+\begin{equation*}
+\begin{split}
+c (u_1 + u_2) &= c \cdot \left(\begin{pmatrix}
+w_1\\
+x_1\\
+y_1\\
+z_1
+\end{pmatrix} + 
+\begin{pmatrix}
+w_2\\
+x_2\\
+y_2\\
+z_2
+\end{pmatrix}\right)\\
+&= c \cdot \begin{pmatrix}
+w_1 + w_2\\
+x_1 + x_2\\
+y_1 + y_2\\
+z_1 + z_2
+\end{pmatrix} \\
+&= \begin{pmatrix}
+c \cdot (w_1 + w_2)\\
+c \cdot (x_1 + x_2)\\
+c \cdot (y_1 + y_2)\\
+c \cdot (z_1 + z_2)
+\end{pmatrix}\\
+&= \begin{pmatrix}
+c \cdot w_1 + c \cdot w_2\\
+c \cdot x_1 + c \cdot x_2\\
+c \cdot y_1 + c \cdot y_2\\
+c \cdot z_1 + c \cdot z_2
+\end{pmatrix}\\
+&= \begin{pmatrix}
+c \cdot w_1\\
+c \cdot x_1\\
+c \cdot y_1\\
+c \cdot z_1
+\end{pmatrix} + \begin{pmatrix}
+c \cdot w_2\\
+c \cdot x_2\\
+c \cdot y_2\\
+c \cdot z_2
+\end{pmatrix}\\
+&= c \cdot \begin{pmatrix}
+w_1\\
+x_1\\
+y_1\\
+z_1
+\end{pmatrix} + c \cdot \begin{pmatrix}
+w_2\\
+x_2\\
+y_2\\
+z_2
+\end{pmatrix}\\
+&= c \cdot u_1 + c \cdot u_2
+\end{split}
+\end{equation*}
+
+\item Identity operation
+\begin{equation*}
+\begin{split}
+1 \cdot u_1 &= 1 \cdot
+\begin{pmatrix}
+w_1\\
+x_1\\
+y_1\\
+z_1
+\end{pmatrix}\\
+&= \begin{pmatrix}
+1 \cdot w_1\\
+1 \cdot x_1\\
+1 \cdot y_1\\
+1 \cdot z_1
+\end{pmatrix}\\
+&= \begin{pmatrix}
+w_1\\
+x_1\\
+y_1\\
+z_1
+\end{pmatrix}\\
+&= u_1
+\end{split}
+\end{equation*}
+\end{enumerate}
+
+Hence, $\mathbb{V}$ forms a vector space as it satisfies all the conditions required for a vector space.
+\newpage
+(1.b) Given:
+ \begin{align}
+\mathbb{M}^{2\times2} = \set[\bigg]{
+\begin{pmatrix}
+a& 1\\
+b& c\\
+\end{pmatrix}
+\given a,b,c \in \mathbb{R}
+} 
+\end{align}
+Let $u_1 \in \mathbb{M}^{2 \times 2}$, such that
+\begin{equation*}
+\begin{split}
+u_1 = \begin{pmatrix}
+a_1 &1\\
+b_1 &c_1
+\end{pmatrix}
+\end{split}
+\end{equation*}
+Checking for the conditions for vector space,
+\begin{enumerate}
+\item Additive inverse
+\begin{equation*}
+\begin{split}
+u_1 = \begin{pmatrix}
+a_1 &1\\
+b_1 &c_1
+\end{pmatrix}\\
+\end{split}
+\end{equation*}
+In order to have an additive inverse, say $v \in \mathbb{M}^{2 \times 2}$, the condition $ u_1 + v = 0$ must be satisfied.\\
+Then $v = -u_1$.
+\begin{equation*}
+-u_1 = 
+\begin{pmatrix}
+-a_1 &-1\\
+-b_1 &-c_1
+\end{pmatrix}
+\end{equation*}
+But $-u_1 \notin \mathbb{M}^{2 \times 2}$ as it is not of the form:
+\begin{equation*}
+\begin{pmatrix}
+a &1\\
+b &c
+\end{pmatrix}
+\end{equation*}
+\end{enumerate}
+Hence, $\mathbb{M}^{2 \times 2}$ does not form a vector space.
+\newpage
+ (1.c) Given:
+ \begin{align*}
+ \mathbb{N} = \set[\Bigg]{f: \mathbb{R} \rightarrow \mathbb{R} \given \frac{df}{dx} + 2f = 1}
+ \end{align*}
+ 
+\newpage
+(2.a) Given:
+	\begin{align*}
+	\mathbb{V} = \set[\Bigg]{
+	\begin{pmatrix}
+	x\\
+	y\\
+	z
+\end{pmatrix}	\given x,y,z \geq 0	
+	}
+	\end{align*}
+
+ (b) Given:
+	\begin{align*}
+	\mathbb{V} = \set[\Bigg]{
+	\begin{pmatrix}
+	x\\
+	y\\
+	z
+\end{pmatrix}	\given x,y,z \in \mathbb{R},~ x^2 = z^2	
+	}
+	\end{align*}
+
+ (c) Given:
+ 	\begin{align*}
+	\mathbb{V} = \set[\Bigg]{
+	\begin{pmatrix}
+	a& b\\
+	c& d\\
+\end{pmatrix}	\given \texttt{det}
+	\begin{pmatrix}
+	a& b\\
+	c& d\\
+	\end{pmatrix} = 0
+	}
+	\end{align*}
+
+ (d) To prove: Intersection of two subspaces of a vector space $\mathbb{V}$ over a field $\mathbb{F}$ is a subspace of $\mathbb{V}$.
+
+\newpage
+4.
+(a)
+	\begin{figure}[h!]
+		\includegraphics[height=10cm]{4a1}
+		\includegraphics[height=10cm]{4a2}
+	\end{figure}
+\newpage
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[height=10cm]{4a3}	
+	\end{figure}
+	Given system of linear equations for each set can be represented
+	as straight lines on a 2D plane. Their intersection points corresponds to the possible solutions.\\
+	Set 1: Unique solution at $(x,y) = (-1, 2)$\\
+	Set 2: no solution (since both lines are parallel and not coincident)\\
+	Set 3: infinite solutions (since both lines are parallel and coincident)\\
+
+\newpage
+4.
+(b) Each set of linear system of equations can be algebraically solved via elimination method or by using their matrix representation.\\
+\\	
+	\textbf{Set 1 (i) Elimination method:}
+	\begin{equation*}
+	\begin{split}
+	&x + 2y = 3\\
+	&\implies x = 3 -2y\\
+	\\
+	&4x + 5y = 6\\
+	&\texttt{So,}~4(3- 2y) + 5y = 6\\
+	&12 - 8y + 5y = 6\\
+	&3y = 6 \\
+	&y = 2\\
+	\\
+	&\implies x + 2\cdot 2 = 3\\
+	&x = -1 
+	\end{split}
+	\end{equation*}
+	\textbf{ (ii) Matrix method:}\\
+	The system of equations can be written in matrix representation form as:
+	\begin{equation*}
+	\begin{split}
+	\begin{pmatrix}
+	1 &2\\
+	4 &5
+	\end{pmatrix}
+	\begin{pmatrix}
+	x\\
+	y
+	\end{pmatrix} =
+	\begin{pmatrix}
+	3\\
+	6
+	\end{pmatrix}
+	\end{split}
+	\end{equation*}
+	which is of the form $\textbf{A}\cdot \textbf{x} = \textbf{b}$.
+	\begin{equation*}
+	\begin{split}
+	\texttt{det}(\textbf{A}) &= ( 5 \cdot 1 - 2 \cdot 4 )\\
+	&= -3
+	\end{split}
+	\end{equation*}
+	det(\textbf{A}) is non zero. Hence the square matrix \textbf{A} is non-singular and $\textbf{A}^{-1}$ exists.\\
+	Then $\textbf{x} = \textbf{A}^{-1}\textbf{b}$.
+	
+	\begin{equation*}
+	\begin{split}
+	\textbf{A}^{-1} &= \frac{1}{-3} \times 
+	\begin{pmatrix}
+	5 &-2\\
+	-4 &1
+	\end{pmatrix}\\
+	\\
+	&= \begin{pmatrix}
+	-5/3 &2/3\\
+	4/3 &-1/3
+	\end{pmatrix}\\
+	\end{split}
+	\end{equation*}
+	\begin{equation*}
+	\begin{split}
+	\textbf{x} &= \textbf{A}^{-1} \textbf{b}\\
+	\\
+	&= 
+	\begin{pmatrix}
+	-5/3 &2/3\\
+	4/3 &-1/3	
+	\end{pmatrix} \times 
+	\begin{pmatrix}
+	3\\
+	6	
+	\end{pmatrix}\\
+	&= 
+	\begin{pmatrix}
+	-1\\
+	2
+	\end{pmatrix}
+	\end{split}
+	\end{equation*}
+	$\therefore ~x = -1$ and $y = 2$ is the solution.
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\textbf{Set 2 (i) Elimination method:}
+	\begin{equation*}
+	\begin{split}
+	&x + 2y = 3\\
+	&\implies x = 3 -2y\\
+	\\
+	&4x + 8y = 6\\
+	&\texttt{So,}~4(3- 2y) + 8y = 6\\
+	&12 - 8y + 8y = 6\\
+	&12 = 6 \\
+	\end{split}
+	\end{equation*}
+	which is not true. Hence the system of equations has no solution.\\
+	\\
+	\textbf{ (ii) Matrix method:}\\
+	The system of equations can be written in matrix representation form as:
+	\begin{equation*}
+	\begin{split}
+	\begin{pmatrix}
+	1 &2\\
+	4 &8
+	\end{pmatrix}
+	\begin{pmatrix}
+	x\\
+	y
+	\end{pmatrix} =
+	\begin{pmatrix}
+	3\\
+	6
+	\end{pmatrix}
+	\end{split}
+	\end{equation*}
+	which is of the form $\textbf{A}\cdot \textbf{x} = \textbf{b}$.
+	\begin{equation*}
+	\begin{split}
+	\texttt{det}(\textbf{A}) &= ( 8 \cdot 1 - 2 \cdot 4 )\\
+	&= 0
+	\end{split}
+	\end{equation*}
+	det(\textbf{A}) is zero. Hence the square matrix \textbf{A} is singular and $\textbf{A}^{-1}$ does not exist.\\
+	Simplifying the system of equations,
+	\begin{equation*}
+	\begin{split}
+	x + 2y &= 3\\
+	x + 2y &= 3/2
+	\end{split}
+	\end{equation*}
+	Subtracting first equation from the second equation, we get $0 = -3/2$. Since this is not possible for any combination of $x$ and $y$, this system of equations has no solutions.\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\textbf{Set 3 (i) Elimination method:}
+	\begin{equation*}
+	\begin{split}
+	&x + 2y = 3\\
+	&\implies x = 3 -2y\\
+	\\
+	&4x + 8y = 12\\
+	&\texttt{So,}~4(3- 2y) + 8y = 12\\
+	&12 - 8y + 8y = 12\\
+	&12 = 12 \\
+	\end{split}
+	\end{equation*}
+	which is true for infinitely many values of $x$ and $y$ which satisfies any one of the equations. Hence the system of equations has infinitely many solutions.\\
+	\\
+	\textbf{ (ii) Matrix method:}\\
+	The system of equations can be written in matrix representation form as:
+	\begin{equation*}
+	\begin{split}
+	\begin{pmatrix}
+	1 &2\\
+	4 &8
+	\end{pmatrix}
+	\begin{pmatrix}
+	x\\
+	y
+	\end{pmatrix} =
+	\begin{pmatrix}
+	3\\
+	12
+	\end{pmatrix}
+	\end{split}
+	\end{equation*}
+	which is of the form $\textbf{A}\cdot \textbf{x} = \textbf{b}$.
+	\begin{equation*}
+	\begin{split}
+	\texttt{det}(\textbf{A}) &= ( 8 \cdot 1 - 2 \cdot 4 )\\
+	&= 0
+	\end{split}
+	\end{equation*}
+	det(\textbf{A}) is zero. Hence the square matrix \textbf{A} is singular and $\textbf{A}^{-1}$ does not exist.\\
+	Simplifying the system of equations,
+	\begin{equation*}
+	\begin{split}
+	x + 2y &= 3\\
+	x + 2y &= 3
+	\end{split}
+	\end{equation*}
+	Since both the equations in the system simplifies to the same equation, both lines have infinitely many coincident points and thus the system has infinitely many solutions.\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+4.
+(c) For each set of linear system of equations, of the form:
+\begin{equation*}
+\begin{split}
+a_1x + b_1y = c_1\\
+a_2x + b_2y = c_2
+\end{split}
+\end{equation*}
+\begin{equation*}
+\begin{pmatrix}
+a_1 &b_1\\
+a_2 &b_2
+\end{pmatrix}
+\begin{pmatrix}
+x\\
+y
+\end{pmatrix} = x
+\begin{pmatrix}
+a_1\\
+a_2
+\end{pmatrix}
++ y
+\begin{pmatrix}
+b_1\\
+b_2
+\end{pmatrix} =
+\begin{pmatrix}
+c_1\\
+c_2
+\end{pmatrix}
+\end{equation*}
+where,
+\begin{equation*}
+\begin{split}
+\textbf{a} = 
+\begin{pmatrix}
+a_1\\
+a_2
+\end{pmatrix} \texttt{,}~
+\textbf{b} = 
+\begin{pmatrix}
+b_1\\
+b_2
+\end{pmatrix}~ \texttt{and}~
+\textbf{c} = 
+\begin{pmatrix}
+c_1\\
+c_2
+\end{pmatrix}
+\end{split}
+\end{equation*}
+This can be thought of as checking whether the vector space spanned by the basis vectors $\textbf{a}$ and $\textbf{b}$ contains the vector $\textbf{c}$. If it does contain $\textbf{c}$, then that implies that atleast a solution exists for $x$ and $y$.\\
+\textbf{Set 1}\\
+\begin{equation*}
+\begin{pmatrix}
+1 &2\\
+4 &5\\
+\end{pmatrix}
+\begin{pmatrix}
+x\\
+y
+\end{pmatrix} =
+\begin{pmatrix}
+3\\
+6
+\end{pmatrix}
+\end{equation*}
+\textbf{Set 2}\\
+\begin{equation*}
+\begin{pmatrix}
+1 &2\\
+4 &8\\
+\end{pmatrix}
+\begin{pmatrix}
+x\\
+y
+\end{pmatrix} =
+\begin{pmatrix}
+3\\
+6
+\end{pmatrix}
+\end{equation*}
+\textbf{Set 3}\\
+\begin{equation*}
+\begin{pmatrix}
+1 &2\\
+4 &8\\
+\end{pmatrix}
+\begin{pmatrix}
+x\\
+y
+\end{pmatrix} =
+\begin{pmatrix}
+3\\
+12
+\end{pmatrix}
+\end{equation*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+5. 
+\begin{align*}
+\textbf{a} = 
+\begin{pmatrix}
+-209/362\\
+-209/362\\
+209/362
+\end{pmatrix},~
+\textbf{b} = 
+\begin{pmatrix}
+0\\
+-408/577\\
+-408/577
+\end{pmatrix},~
+\textbf{c} = 
+\begin{pmatrix}
+396/485\\
+-198/485\\
+198/485
+\end{pmatrix}
+\end{align*}
+Rewriting,
+\begin{equation*}
+\begin{split}
+\textbf{a} = 209/362 \times
+\begin{pmatrix}
+-1\\
+-1\\
+1
+\end{pmatrix},~
+\textbf{b} = 408/577 \times
+\begin{pmatrix}
+0\\
+-1\\
+-1
+\end{pmatrix},~
+\textbf{c} = 198/485 \times
+\begin{pmatrix}
+2\\
+-1\\
+1
+\end{pmatrix}
+\end{split}
+\end{equation*}
+
+
+(a) Dot product:
+\begin{equation*}
+\begin{split}
+\textbf{a.b} &= \sum_{i=1}^{n} a_i b_i,~ \textbf{a,b} \in \mathbb{R}^n\\
+ &= (209/362) \times (408/577) \times ((-1\cdot0) + (-1\cdot-1) + (1\cdot-1))\\
+&= 0\\
+\textbf{b.c} &= \sum_{i=1}^{n} b_i c_i,~ \textbf{b,c} \in \mathbb{R}^n\\
+ &= (408/577) \times (198/485) \times ((0\cdot2) + (-1\cdot-1) + (-1\cdot1))\\
+&= 0\\
+\textbf{c.a} &= \sum_{i=1}^{n} c_i a_i,~ \textbf{c,a} \in \mathbb{R}^n\\
+ &= (198/485) \times (209/362) \times ((2\cdot-1) + (-1\cdot-1) + (1\cdot1))\\
+&= 0
+\end{split}
+\end{equation*}
+
+(b) Geometric length:
+\begin{equation*}
+\begin{split}
+\sqrt{\textbf{a.a}} &= \sqrt{\sum_{i=1}^{n} a_i a_i},~ \textbf{a} \in \mathbb{R}^n\\
+ &= \sqrt{(209/362) \times (209/362) \times ((-1\cdot-1) + (-1\cdot-1) + (1\cdot1))}\\
+&= 1\\
+\sqrt{\textbf{b.b}} &= \sqrt{\sum_{i=1}^{n} b_i b_i},~ \textbf{b} \in \mathbb{R}^n\\
+ &= \sqrt{(408/577) \times (408/577) \times ((0\cdot0) + (-1\cdot-1) + (-1\cdot-1))}\\
+&= 1\\
+\sqrt{\textbf{c.c}} &= \sqrt{\sum_{i=1}^{n} c_i c_i},~ \textbf{c} \in \mathbb{R}^n\\
+ &= \sqrt{(198/485) \times (198/485) \times ((2\cdot2) + (-1\cdot-1) + (1\cdot1))}\\
+&= 1\\
+\\
+\\
+\textbf{x} &= \begin{pmatrix}
+2\\
+-40/57\\
+8/77
+\end{pmatrix}\\
+\\
+\sqrt{\textbf{x.x}} &= \sqrt{\sum_{i=1}^{n} x_i x_i},~ \textbf{x} \in \mathbb{R}^n\\
+ &= \sqrt{(2\cdot2) + (-40/57 \cdot -40/57) + (8/77 \cdot 8/77)}\\
+&\approx \sqrt{4 + 1600/3249 + 64/5929}\\
+&\approx 2.12
+\end{split}
+\end{equation*}
+
+\newpage
+(c) 
+\begin{equation*}
+\begin{split}
+\textbf{A} &= 
+\begin{pmatrix}
+-209/362 &0 &396/485\\
+-209/362 &-408/577 &-198/485\\
+209/362 &-408/577 &198/485
+\end{pmatrix}\\
+\\
+\textbf{Ax} &= 
+\begin{pmatrix}
+-209/362 &0 &396/485\\
+-209/362 &-408/577 &-198/485\\
+209/362 &-408/577 &198/485
+\end{pmatrix}
+\times 
+\begin{pmatrix}
+2\\
+-40/57\\
+8/77
+\end{pmatrix}\\
+\\
+&= \begin{pmatrix}
+-1.070\\
+-0.701\\
+1.693
+\end{pmatrix}\\
+\\
+\sqrt{\textbf{Ax}\cdot\textbf{Ax}} &= \sqrt{ (-1.070\cdot-1.070) + (-0.701\cdot-0.701) + (1.693\cdot1.693)}\\
+&\approx \sqrt{1.145 + 0.491 + 2.866}\\
+&\approx 2.12
+\end{split}
+\end{equation*}
+It is observed that both $\sqrt{\textbf{Ax.Ax}}$ and $\sqrt{\textbf{x.x}}$ are equal.\\
+\bf{Reason:}
+
+\newpage
+(d) 
+\begin{equation*}
+\begin{split}
+\textbf{A}^{T}\textbf{A} &=
+\begin{pmatrix}
+-209/362 &-209/362 &209/362\\
+0 &-408/577 &-408/577\\
+396/485 &-198/485 &198/485
+\end{pmatrix} \times
+\begin{pmatrix}
+-209/362 &0 &396/485\\
+-209/362 &-408/577 &-198/485\\
+209/362 &-408/577 &198/485
+\end{pmatrix}\\
+\\
+&\approx \begin{pmatrix}
+1 &0 &0\\
+0 &1 &0\\
+0 &0 &1
+\end{pmatrix}\\
+\\
+\textbf{A}\textbf{A}^{T} &=
+\begin{pmatrix}
+-209/362 &0 &396/485\\
+-209/362 &-408/577 &-198/485\\
+209/362 &-408/577 &198/485
+\end{pmatrix} \times
+\begin{pmatrix}
+-209/362 &-209/362 &209/362\\
+0 &-408/577 &-408/577\\
+396/485 &-198/485 &198/485
+\end{pmatrix}\\
+\\
+&\approx \begin{pmatrix}
+1 &0 &0\\
+0 &1 &0\\
+0 &0 &1
+\end{pmatrix}
+\end{split}
+\end{equation*}
+\end{document}

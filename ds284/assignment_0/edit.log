@@ -1,0 +1,642 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.7.19)  16 AUG 2021 23:48
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**edit.tex
+(./edit.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/fleqn.clo
+File: fleqn.clo 2016/12/29 v1.2b Standard LaTeX option (flush left equations)
+\mathindent=\skip47
+Applying: [2015/01/01] Make \[ robust on input line 50.
+LaTeX Info: Redefining \[ on input line 51.
+Already applied: [0000/00/00] Make \[ robust on input line 62.
+Applying: [2015/01/01] Make \] robust on input line 74.
+LaTeX Info: Redefining \] on input line 75.
+Already applied: [0000/00/00] Make \] robust on input line 83.
+)
+(/usr/share/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen138
+)
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen139
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count187
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count188
+\leftroot@=\count189
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count190
+\DOTSCASE@=\count191
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count192
+\c@MaxMatrixCols=\count193
+\dotsspace@=\muskip16
+\c@parentequation=\count194
+\dspbrk@lvl=\count195
+\tag@help=\toks18
+\row@=\count196
+\column@=\count197
+\maxfields@=\count198
+\andhelp@=\toks19
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks20
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks22
+\thm@bodyfont=\toks23
+\thm@headfont=\toks24
+\thm@notefont=\toks25
+\thm@headpunct=\toks26
+\thm@preskip=\skip53
+\thm@postskip=\skip54
+\thm@headsep=\skip55
+\dth@everypar=\toks27
+)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amscd.sty
+Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
+\athelp@=\toks28
+\minaw@=\dimen148
+\bigaw@=\dimen149
+\minCDarrowwidth=\dimen150
+)
+(/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip56
+\multirow@cntb=\count199
+\multirow@dima=\skip57
+\bigstrutjot=\dimen151
+)
+(/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen152
+\lightrulewidth=\dimen153
+\cmidrulewidth=\dimen154
+\belowrulesep=\dimen155
+\belowbottomsep=\dimen156
+\aboverulesep=\dimen157
+\abovetopsep=\dimen158
+\cmidrulesep=\dimen159
+\cmidrulekern=\dimen160
+\defaultaddspace=\dimen161
+\@cmidla=\count266
+\@cmidlb=\count267
+\@aboverulesep=\dimen162
+\@belowrulesep=\dimen163
+\@thisruleclass=\count268
+\@lastruleclass=\count269
+\@thisrulewidth=\dimen164
+)
+(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)
+(/usr/share/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+
+(/usr/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen165
+\ar@mcellbox=\box49
+\extrarowheight=\dimen166
+\NC@list=\toks29
+\extratabsurround=\skip58
+\backup@length=\skip59
+\ar@cellbox=\box50
+)
+\everycr=\toks30
+\minrowclearance=\skip60
+)
+\rownum=\count270
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/share/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip61
+)
+(/usr/share/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+)
+(/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\enitkv@toks@=\toks31
+\labelindent=\skip62
+\enit@outerparindent=\dimen167
+\enit@toks=\toks32
+\enit@inbox=\box51
+\enit@count@id=\count271
+\enitdp@description=\count272
+)
+(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip63
+\f@nch@O@elh=\skip64
+\f@nch@O@erh=\skip65
+\f@nch@O@olh=\skip66
+\f@nch@O@orh=\skip67
+\f@nch@O@elf=\skip68
+\f@nch@O@erf=\skip69
+\f@nch@O@olf=\skip70
+\f@nch@O@orf=\skip71
+)
+(/usr/share/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen168
+\WF@size=\dimen169
+\c@WF@wrappedlines=\count273
+\WF@box=\box52
+\WF@everypar=\toks33
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks34
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen170
+\Gin@req@width=\dimen171
+)
+(/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count274
+\calc@Bcount=\count275
+\calc@Adimen=\dimen172
+\calc@Bdimen=\dimen173
+\calc@Askip=\skip72
+\calc@Bskip=\skip73
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count276
+\calc@Cskip=\skip74
+)
+(/usr/share/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count277
+\mult@box=\box53
+\multicol@leftmargin=\dimen174
+\c@unbalance=\count278
+\c@collectmore=\count279
+\doublecol@number=\count280
+\multicoltolerance=\count281
+\multicolpretolerance=\count282
+\full@width=\dimen175
+\page@free=\dimen176
+\premulticols=\dimen177
+\postmulticols=\dimen178
+\multicolsep=\skip75
+\multicolbaselineskip=\skip76
+\partial@page=\box54
+\last@line=\box55
+\maxbalancingoverflow=\dimen179
+\mult@rightbox=\box56
+\mult@grightbox=\box57
+\mult@gfirstbox=\box58
+\mult@firstbox=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\c@minrows=\count283
+\c@columnbadness=\count284
+\c@finalcolumnbadness=\count285
+\last@try=\dimen180
+\multicolovershoot=\dimen181
+\multicolundershoot=\dimen182
+\mult@nat@firstbox=\box97
+\colbreak@box=\box98
+\mc@col@check@num=\count286
+)
+(/usr/share/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count287
+\Gm@cntv=\count288
+\c@Gm@tempcnt=\count289
+\Gm@bindingoffset=\dimen183
+\Gm@wd@mp=\dimen184
+\Gm@odd@mp=\dimen185
+\Gm@even@mp=\dimen186
+\Gm@layoutwidth=\dimen187
+\Gm@layoutheight=\dimen188
+\Gm@layouthoffset=\dimen189
+\Gm@layoutvoffset=\dimen190
+\Gm@dimlist=\toks35
+)
+(/usr/share/texmf-dist/tex/latex/floatrow/floatrow.sty
+Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
+
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen191
+\captionmargin@=\dimen192
+\captionwidth=\dimen193
+\caption@tempdima=\dimen194
+\caption@indent=\dimen195
+\caption@parindent=\dimen196
+\caption@hangindent=\dimen197
+Package caption Info: Standard document class detected.
+)
+\c@float@type=\count290
+\float@exts=\toks36
+\float@box=\box99
+\@floatcapt=\box100
+Package floatrow Info: Modified float package code loaded on input line 455.
+Package floatrow Info: Modified rotfloat package code loaded on input line 473.
+
+\FR@everyfloat=\toks37
+\flrow@foot=\insert252
+\FB@wd=\dimen198
+\FBo@wd=\dimen199
+\FBc@wd=\dimen256
+\FBo@ht=\skip77
+\FBc@ht=\skip78
+\FBf@ht=\skip79
+\FBo@max=\skip80
+\FBc@max=\skip81
+\FBf@max=\skip82
+\c@FBl@b=\count291
+\floatbox@depth=\count292
+\c@FRobj=\count293
+\c@FRsobj=\count294
+\Xhsize=\skip83
+\sXhsize=\skip84
+\Zhsize=\skip85
+\sZhsize=\skip86
+\flrow@rowbox=\box101
+\FR@Zunitlength=\dimen257
+\c@FBcnt=\count295
+\FPOScnt=\count296
+\LTleft=\skip87
+\LTright=\skip88
+\LTleft=\skip89
+\LTright=\skip90
+\flrow@types=\toks38
+)
+\tabcont=\skip91
+
+(/usr/share/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2021/03/18 v1.25 mathematical typesetting tools
+
+(/usr/share/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count297
+\l_MT_multwidth_dim=\dimen258
+\origjot=\skip92
+\l_MT_shortvdotswithinadjustabove_dim=\dimen259
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen260
+\l_MT_above_intertext_sep=\dimen261
+\l_MT_below_intertext_sep=\dimen262
+\l_MT_above_shortintertext_sep=\dimen263
+\l_MT_below_shortintertext_sep=\dimen264
+\xmathstrut@box=\box102
+\xmathstrut@dim=\dimen265
+)
+\c@defn=\count298
+\c@reg=\count299
+\c@ejer=\count300
+
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count301
+\l__pdf_internal_box=\box103
+) (./edit.aux)
+\openout1 = `edit.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count302
+\scratchdimen=\dimen266
+\scratchbox=\box104
+\nofMPsegments=\count303
+\nofMParguments=\count304
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count305
+\MPscratchDim=\dimen267
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
+\everyMPtoPDFconversion=\toks40
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 40.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 443.57848pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 624.25346pt, 85.35826pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=443.57848pt
+* \textheight=624.25346pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=13.08827pt
+* \headheight=32.0pt
+* \headsep=0.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
+
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 43
+.
+
+(/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
+
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+] [2] [3] [4] [5] [6]
+[7] [8] [9]
+<./img//4a1.png, id=41, 489.83pt x 356.33125pt>
+File: ./img//4a1.png Graphic file (type png)
+<use ./img//4a1.png>
+Package pdftex.def Info: ./img//4a1.png  used on input line 479.
+(pdftex.def)             Requested size: 391.13953pt x 284.52756pt.
+<./img//4a2.png, id=43, 486.81876pt x 352.31625pt>
+File: ./img//4a2.png Graphic file (type png)
+<use ./img//4a2.png>
+Package pdftex.def Info: ./img//4a2.png  used on input line 480.
+(pdftex.def)             Requested size: 393.14737pt x 284.52756pt.
+ [10 <./img//4a1.png> <./img//4a2.png>]
+<./img//4a3.png, id=49, 488.82625pt x 356.33125pt>
+File: ./img//4a3.png Graphic file (type png)
+<use ./img//4a3.png>
+Package pdftex.def Info: ./img//4a3.png  used on input line 485.
+(pdftex.def)             Requested size: 390.33801pt x 284.52756pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--492
+
+ []
+
+[11 <./img//4a3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 494--498
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 589--594
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 638--643
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--676
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 727--730
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 743--745
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 758--760
+
+ []
+
+[15] [16]
+Overfull \vbox (9.24759pt too high) has occurred while \output is active []
+
+
+[17] [18] 
+AED: lastpage setting LastPage
+[19] (./edit.aux) ) 
+Here is how much of TeX's memory you used:
+ 6472 strings out of 478994
+ 95353 string characters out of 5864751
+ 424866 words of memory out of 5000000
+ 23850 multiletter control sequences out of 15000+600000
+ 410309 words of font info for 55 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 68i,16n,74p,292b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type
+1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/symbols/msbm10.pfb>
+Output written on edit.pdf (19 pages, 148249 bytes).
+PDF statistics:
+ 117 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+
