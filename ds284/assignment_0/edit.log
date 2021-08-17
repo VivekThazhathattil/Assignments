@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.7.19)  16 AUG 2021 23:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.7.19)  17 AUG 2021 12:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -551,92 +551,213 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2] [3] [4] [5] [6]
-[7] [8] [9]
-<./img//4a1.png, id=41, 489.83pt x 356.33125pt>
-File: ./img//4a1.png Graphic file (type png)
-<use ./img//4a1.png>
-Package pdftex.def Info: ./img//4a1.png  used on input line 479.
-(pdftex.def)             Requested size: 391.13953pt x 284.52756pt.
-<./img//4a2.png, id=43, 486.81876pt x 352.31625pt>
-File: ./img//4a2.png Graphic file (type png)
-<use ./img//4a2.png>
-Package pdftex.def Info: ./img//4a2.png  used on input line 480.
-(pdftex.def)             Requested size: 393.14737pt x 284.52756pt.
- [10 <./img//4a1.png> <./img//4a2.png>]
-<./img//4a3.png, id=49, 488.82625pt x 356.33125pt>
-File: ./img//4a3.png Graphic file (type png)
-<use ./img//4a3.png>
-Package pdftex.def Info: ./img//4a3.png  used on input line 485.
-(pdftex.def)             Requested size: 390.33801pt x 284.52756pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 487--492
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 434--453
 
  []
 
-[11 <./img//4a3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 494--498
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--453
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 519--522
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 571--579
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--579
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 591--599
+
+ []
+
+[10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 648--650
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 656--659
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 589--594
+Underfull \hbox (badness 10000) in paragraph at lines 665--671
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 665--671
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--681
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 638--643
+<./img//4a1.png, id=56, 489.83pt x 356.33125pt>
+File: ./img//4a1.png Graphic file (type png)
+<use ./img//4a1.png>
+Package pdftex.def Info: ./img//4a1.png  used on input line 760.
+(pdftex.def)             Requested size: 391.13953pt x 284.52756pt.
+<./img//4a2.png, id=58, 486.81876pt x 352.31625pt>
+File: ./img//4a2.png Graphic file (type png)
+<use ./img//4a2.png>
+Package pdftex.def Info: ./img//4a2.png  used on input line 761.
+(pdftex.def)             Requested size: 393.14737pt x 284.52756pt.
+ [14 <./img//4a1.png> <./img//4a2.png>]
+<./img//4a3.png, id=64, 488.82625pt x 356.33125pt>
+File: ./img//4a3.png Graphic file (type png)
+<use ./img//4a3.png>
+Package pdftex.def Info: ./img//4a3.png  used on input line 766.
+(pdftex.def)             Requested size: 390.33801pt x 284.52756pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 768--773
+
+ []
+
+[15 <./img//4a3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 776--779
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 870--875
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 919--924
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 673--676
+Underfull \hbox (badness 10000) in paragraph at lines 954--957
 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 727--730
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 743--745
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 1008--1012
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 758--760
+Underfull \hbox (badness 10000) in paragraph at lines 1037--1039
 
  []
 
-[15] [16]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1045--1047
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1048--1049
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1074--1079
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1074--1079
+
+ []
+
+[19] [20] [21]
 Overfull \vbox (9.24759pt too high) has occurred while \output is active []
 
 
-[17] [18] 
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 1220--1222
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 1263--1267
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1276--1280
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1276--1280
+
+ []
+
+[24] 
 AED: lastpage setting LastPage
-[19] (./edit.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1281--1284
+
+ []
+
+[25] (./edit.aux) ) 
 Here is how much of TeX's memory you used:
- 6472 strings out of 478994
- 95353 string characters out of 5864751
+ 6475 strings out of 478994
+ 95400 string characters out of 5864751
  424866 words of memory out of 5000000
- 23850 multiletter control sequences out of 15000+600000
- 410309 words of font info for 55 fonts, out of 8000000 for 9000
+ 23852 multiletter control sequences out of 15000+600000
+ 410646 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,16n,74p,292b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12
-.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
-re/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type
-1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/
-amsfonts/symbols/msbm10.pfb>
-Output written on edit.pdf (19 pages, 148249 bytes).
+ 68i,16n,74p,355b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1
+.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on edit.pdf (25 pages, 175449 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
+ 141 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
