@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<database>
+<specie CAS="1333-74-0">
+    <formula_name_structure>
+       <formula_name_structure_1>H2</formula_name_structure_1>
+    </formula_name_structure>
+    <reference>
+       <reference_1>TSIV</reference_1>
+    </reference>
+    <hf298>
+       <hf298_1>0.0</hf298_1>
+    </hf298>
+<phase>
+  <formula>H2  REF ELEMENT</formula>
+  <source>RUS</source>
+  <date>78</date>
+  <elements>
+    <element name="H" num_of_atoms="2"/>
+  </elements>
+  <phase>G</phase>
+  <temp_limit low="200.000" high="6000.000"/>
+  <calc_quality>A</calc_quality>
+  <molecular_weight>2.01588</molecular_weight>
+  <coefficients>
+    <range_1000_to_Tmax>
+      <coef name="a1">0.29328305E+01</coef>
+      <coef name="a2">0.82659802E-03</coef>
+      <coef name="a3">-0.14640057E-06</coef>
+      <coef name="a4">0.15409851E-10</coef>
+      <coef name="a5">-0.68879615E-15</coef>
+      <coef name="a6">-0.81305582E+03</coef>
+      <coef name="a7">-0.10243164E+01</coef>
+    </range_1000_to_Tmax>
+    <range_Tmin_to_1000>
+      <coef name="a1">0.23443029E+01</coef>
+      <coef name="a2">0.79804248E-02</coef>
+      <coef name="a3">-0.19477917E-04</coef>
+      <coef name="a4">0.20156967E-07</coef>
+      <coef name="a5">-0.73760289E-11</coef>
+      <coef name="a6">-0.91792413E+03</coef>
+      <coef name="a7">0.68300218E+00</coef>
+    </range_Tmin_to_1000>
+    <hf298_div_r>0.00000000E+00</hf298_div_r>
+  </coefficients>
+</phase>
+</specie>
+
+
+<specie CAS="12385-13-6">
+    <formula_name_structure>
+       <formula_name_structure_1>H</formula_name_structure_1>
+    </formula_name_structure>
+    <reference>
+       <reference_1>C.E. MOORE "SELECTED TABLES OF ATOMIC SPECTRA" NSRDS-NBS SEC 6 1972 P. A1 I.</reference_1>
+    </reference>
+    <hf0>
+       <hf0_1>211.801 KJ</hf0_1>
+    </hf0>
+    <additional_information>
+       <additional_information_1>HF298=217.998+/-3.4E-5 REF=ATCT A</additional_information_1>
+    </additional_information>
+<phase>
+  <formula>H</formula>
+  <source>L</source>
+  <date>6/94</date>
+  <elements>
+    <element name="H" num_of_atoms="1"/>
+  </elements>
+  <phase>G</phase>
+  <temp_limit low="200.000" high="6000.000"/>
+  <calc_quality>A</calc_quality>
+  <molecular_weight>1.00794</molecular_weight>
+  <coefficients>
+    <range_1000_to_Tmax>
+      <coef name="a1">0.25000000E+01</coef>
+      <coef name="a2">0.00000000E+00</coef>
+      <coef name="a3">0.00000000E+00</coef>
+      <coef name="a4">0.00000000E+00</coef>
+      <coef name="a5">0.00000000E+00</coef>
+      <coef name="a6">0.25473660E+05</coef>
+      <coef name="a7">-0.44668285E+00</coef>
+    </range_1000_to_Tmax>
+    <range_Tmin_to_1000>
+      <coef name="a1">0.25000000E+01</coef>
+      <coef name="a2">0.00000000E+00</coef>
+      <coef name="a3">0.00000000E+00</coef>
+      <coef name="a4">0.00000000E+00</coef>
+      <coef name="a5">0.00000000E+00</coef>
+      <coef name="a6">0.25473660E+05</coef>
+      <coef name="a7">-0.44668285E+00</coef>
+    </range_Tmin_to_1000>
+    <hf298_div_r>0.26219035E+05</hf298_div_r>
+  </coefficients>
+</phase>
+</specie>
+
+
+<specie CAS="17778-80-2">
+    <formula_name_structure>
+       <formula_name_structure_1>O</formula_name_structure_1>
+    </formula_name_structure>
+    <reference>
+       <reference_1>C.E. MOORE "SELECTED TABLES OF ATOMIC SPECTRA" NSRDS-NBS SEC 7 1976 P. A8 I</reference_1>
+    </reference>
+    <hf298>
+       <hf298_1>249.175+/-0.1 KJ</hf298_1>
+    </hf298>
+    <additional_information>
+       <additional_information_1>HF298=249.229+/-0.02 KJ REF=ATCT A</additional_information_1>
+    </additional_information>
+<phase>
+  <formula>O</formula>
+  <source>L</source>
+  <date>1/90</date>
+  <elements>
+    <element name="O" num_of_atoms="1"/>
+  </elements>
+  <phase>G</phase>
+  <temp_limit low="200.000" high="6000.000"/>
+  <calc_quality>A</calc_quality>
+  <molecular_weight>15.99940</molecular_weight>
+  <coefficients>
+    <range_1000_to_Tmax>
+      <coef name="a1">2.54363697E+00</coef>
+      <coef name="a2">-2.73162486E-05</coef>
+      <coef name="a3">-4.19029520E-09</coef>
+      <coef name="a4">4.95481845E-12</coef>
+      <coef name="a5">-4.79553694E-16</coef>
+      <coef name="a6">2.92260120E+04</coef>
+      <coef name="a7">4.92229457E+00</coef>
+    </range_1000_to_Tmax>
+    <range_Tmin_to_1000>
+      <coef name="a1">3.16826710E+00</coef>
+      <coef name="a2">-3.27931884E-03</coef>
+      <coef name="a3">6.64306396E-06</coef>
+      <coef name="a4">-6.12806624E-09</coef>
+      <coef name="a5">2.11265971E-12</coef>
+      <coef name="a6">2.91222592E+04</coef>
+      <coef name="a7">2.05193346E+00</coef>
+    </range_Tmin_to_1000>
+    <hf298_div_r>2.99687009E+04</hf298_div_r>
+  </coefficients>
+</phase>
+</specie>
+
+
+
+<specie CAS="7782-44-7">
+    <formula_name_structure>
+       <formula_name_structure_1>O2 CALCULATED FROM ORIGINAL VALUES</formula_name_structure_1>
+    </formula_name_structure>
+    <reference>
+       <reference_1>GURVICH 1989.</reference_1>
+    </reference>
+    <hf298>
+       <hf298_1>0 KJ</hf298_1>
+    </hf298>
+<phase>
+  <formula>O2 REF ELEMENT</formula>
+  <source>RUS</source>
+  <date>89</date>
+  <elements>
+    <element name="O" num_of_atoms="2"/>
+  </elements>
+  <phase>G</phase>
+  <temp_limit low="200.000" high="6000.000"/>
+  <calc_quality>A</calc_quality>
+  <molecular_weight>31.99880</molecular_weight>
+  <coefficients>
+    <range_1000_to_Tmax>
+      <coef name="a1">3.66096083E+00</coef>
+      <coef name="a2">6.56365523E-04</coef>
+      <coef name="a3">-1.41149485E-07</coef>
+      <coef name="a4">2.05797658E-11</coef>
+      <coef name="a5">-1.29913248E-15</coef>
+      <coef name="a6">-1.21597725E+03</coef>
+      <coef name="a7">3.41536184E+00</coef>
+    </range_1000_to_Tmax>
+    <range_Tmin_to_1000>
+      <coef name="a1">3.78245636E+00</coef>
+      <coef name="a2">-2.99673415E-03</coef>
+      <coef name="a3">9.84730200E-06</coef>
+      <coef name="a4">-9.68129508E-09</coef>
+      <coef name="a5">3.24372836E-12</coef>
+      <coef name="a6">-1.06394356E+03</coef>
+      <coef name="a7">3.65767573E+00</coef>
+    </range_Tmin_to_1000>
+    <hf298_div_r>0.00000000E+00</hf298_div_r>
+  </coefficients>
+</phase>
+</specie>
+
+
+<specie CAS="3352-57-6">
+    <formula_name_structure>
+       <formula_name_structure_1>OH HYDROXYL RADICAL</formula_name_structure_1>
+    </formula_name_structure>
+    <t0_statwt>
+       <t0_statwt_1>0 STATWT=2</t0_statwt_1>
+       <t0_statwt_2>139.7 STATWT=2</t0_statwt_2>
+       <t0_statwt_3>32403 STATWT=2</t0_statwt_3>
+    </t0_statwt>
+    <be>
+       <be_1>17</be_1>
+    </be>
+    <we>
+       <we_1>3738</we_1>
+       <we_2>3184.3</we_2>
+    </we>
+    <wexe>
+       <wexe_1/>
+       <wexe_2>97.845</wexe_2>
+    </wexe>
+    <b0>
+       <b0_1>18.550</b0_1>
+    </b0>
+    <reference>
+       <reference_1>POLY- NOMIALS WERE CALCULATED DIRECTLY FROM GURVICH'S TABLES WICH ARE DIRECT SUMMATION,</reference_1>
+       <reference_2>RUSCIC ET AL JPC 106,(2002),2727. RUSCIC ET AL JPCRD 2005</reference_2>
+    </reference>
+    <hf0>
+       <hf0_1>37.1+/-0.3 KJ</hf0_1>
+    </hf0>
+    <hf298>
+       <hf298_1>37.3+/-0.3 KJ</hf298_1>
+    </hf298>
+    <additional_information>
+       <additional_information_1>HF298=37.344+/-0.04 KJ REF=ATCT A</additional_information_1>
+    </additional_information>
+    <max_lst_sq_error>
+       <max_lst_sq_error_1>CP @ 1200 K 0.28%</max_lst_sq_error_1>
+    </max_lst_sq_error>
+<phase>
+  <formula>OH HYDROXYL RADI</formula>
+  <source>IU</source>
+  <date>3/03</date>
+  <elements>
+    <element name="O" num_of_atoms="1"/>
+    <element name="H" num_of_atoms="1"/>
+  </elements>
+  <phase>G</phase>
+  <temp_limit low="200.000" high="6000.000"/>
+  <calc_quality>A</calc_quality>
+  <molecular_weight>17.00734</molecular_weight>
+  <coefficients>
+    <range_1000_to_Tmax>
+      <coef name="a1">2.83853033E+00</coef>
+      <coef name="a2">1.10741289E-03</coef>
+      <coef name="a3">-2.94000209E-07</coef>
+      <coef name="a4">4.20698729E-11</coef>
+      <coef name="a5">-2.42289890E-15</coef>
+      <coef name="a6">3.69780808E+03</coef>
+      <coef name="a7">5.84494652E+00</coef>
+    </range_1000_to_Tmax>
+    <range_Tmin_to_1000>
+      <coef name="a1">3.99198424E+00</coef>
+      <coef name="a2">-2.40106655E-03</coef>
+      <coef name="a3">4.61664033E-06</coef>
+      <coef name="a4">-3.87916306E-09</coef>
+      <coef name="a5">1.36319502E-12</coef>
+      <coef name="a6">3.36889836E+03</coef>
+      <coef name="a7">-1.03998477E-01</coef>
+    </range_Tmin_to_1000>
+    <hf298_div_r>4.48615380E+03</hf298_div_r>
+  </coefficients>
+</phase>
+</specie>
+
+<specie CAS="7732-18-5">
+    <formula_name_structure>
+       <formula_name_structure_1>H2O</formula_name_structure_1>
+    </formula_name_structure>
+    <reference>
+       <reference_1>WOOLEY J. RES. NBS 92 (1987), 35.  BASED ON HF298(L) FROM COX, WAGMAN &amp; MEDVEDEV CODATA KEY VAL. FOR THERMO, HEMISPHERE 1989 P.21 AND HEAT OF VAP. FROM HAAR, GALLAGHER &amp; KELL NBS/NRC TABLES, HEMISPHERE 1984.</reference_1>
+    </reference>
+    <hf298>
+       <hf298_1>-241.826+/-0.04 KJ</hf298_1>
+    </hf298>
+    <additional_information>
+       <additional_information_1>HF298=-241.815+/-0.03 KJ REF=ATCT A</additional_information_1>
+    </additional_information>
+<phase>
+  <formula>H2O</formula>
+  <source>L</source>
+  <date>5/89</date>
+  <elements>
+    <element name="H" num_of_atoms="2"/>
+    <element name="O" num_of_atoms="1"/>
+  </elements>
+  <phase>G</phase>
+  <temp_limit low="200.000" high="6000.000"/>
+  <calc_quality>A</calc_quality>
+  <molecular_weight>18.01528</molecular_weight>
+  <coefficients>
+    <range_1000_to_Tmax>
+      <coef name="a1">0.26770389E+01</coef>
+      <coef name="a2">0.29731816E-02</coef>
+      <coef name="a3">-0.77376889E-06</coef>
+      <coef name="a4">0.94433514E-10</coef>
+      <coef name="a5">-0.42689991E-14</coef>
+      <coef name="a6">-0.29885894E+05</coef>
+      <coef name="a7">0.68825500E+01</coef>
+    </range_1000_to_Tmax>
+    <range_Tmin_to_1000>
+      <coef name="a1">0.41986352E+01</coef>
+      <coef name="a2">-0.20364017E-02</coef>
+      <coef name="a3">0.65203416E-05</coef>
+      <coef name="a4">-0.54879269E-08</coef>
+      <coef name="a5">0.17719680E-11</coef>
+      <coef name="a6">-0.30293726E+05</coef>
+      <coef name="a7">-0.84900901E+00</coef>
+    </range_Tmin_to_1000>
+    <hf298_div_r>-0.29084817E+05</hf298_div_r>
+  </coefficients>
+</phase>
+</specie>
+
+
+<specie CAS="7727-37-9">
+    <formula_name_structure>
+       <formula_name_structure_1>N2</formula_name_structure_1>
+    </formula_name_structure>
+    <reference>
+       <reference_1>TSIV</reference_1>
+    </reference>
+    <hf298>
+       <hf298_1>0.0 KJ</hf298_1>
+    </hf298>
+    <max_lst_sq_error>
+       <max_lst_sq_error_1>CP @ 6000 K 0.29%</max_lst_sq_error_1>
+    </max_lst_sq_error>
+<phase>
+  <formula>N2  REF ELEMENT</formula>
+  <source>G</source>
+  <date>8/02</date>
+  <elements>
+    <element name="N" num_of_atoms="2"/>
+  </elements>
+  <phase>G</phase>
+  <temp_limit low="200.000" high="6000.000"/>
+  <calc_quality>A</calc_quality>
+  <molecular_weight>28.01340</molecular_weight>
+  <coefficients>
+    <range_1000_to_Tmax>
+      <coef name="a1">2.95257637E+00</coef>
+      <coef name="a2">1.39690040E-03</coef>
+      <coef name="a3">-4.92631603E-07</coef>
+      <coef name="a4">7.86010195E-11</coef>
+      <coef name="a5">-4.60755204E-15</coef>
+      <coef name="a6">-9.23948688E+02</coef>
+      <coef name="a7">5.87188762E+00</coef>
+    </range_1000_to_Tmax>
+    <range_Tmin_to_1000>
+      <coef name="a1">3.53100528E+00</coef>
+      <coef name="a2">-1.23660988E-04</coef>
+      <coef name="a3">-5.02999433E-07</coef>
+      <coef name="a4">2.43530612E-09</coef>
+      <coef name="a5">-1.40881235E-12</coef>
+      <coef name="a6">-1.04697628E+03</coef>
+      <coef name="a7">2.96747038E+00</coef>
+    </range_Tmin_to_1000>
+    <hf298_div_r>0.00000000E+00</hf298_div_r>
+  </coefficients>
+</phase>
+</specie>
+</database>
