@@ -1,0 +1,630 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do not alter this block (unless you're familiar with LaTeX
+\documentclass[fleqn]{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, fancyhdr, color, comment, graphicx, environ}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+
+\pagestyle{fancy}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+
+% prevent line break in inline mode
+\binoppenalty=\maxdimen
+\relpenalty=\maxdimen
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fill in the appropriate information below
+\lhead{Vivek T., 17397, MTech-D, AE}
+\rhead{\textbf{DS284 Assignment-1  Due: September 2, 2021}}
+%\rhead{17397, MTech-D, AE} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{problem}{1}
+\textbf{[30 marks]} Let $A \in \mathbb{R}^{m \times n}$ and $B \in \mathbb{R}^{n \times p}$, $R(.)$ denotes the range of the matrix, $N(.)$ denotes the null space of a given amtrix, $dim(.)$ denotes the dimension of a vector space, then prove the following:\\
+\begin{enumerate}[label=(\alph*)]
+\item $dim[R(\textbf{AB})] \leq dim[R(\textbf{A})]$
+\item If the matrix $\textbf{B}$ is non-singular then $dim[R(\textbf{AB})]$ = $dim[R(\textbf{A})]$.
+\item $dim[N(AB)] \leq dim[N(\textbf{A})] + dim[N(\textbf{B})]$
+\item $dim[R(\textbf{A})] + dim[N(\textbf{A})]= n$
+\item $rank(\textbf{A}) + rank(\textbf{B}) - n \leq rank(\textbf{AB}) \leq min(rank(\textbf{A}), rank(\textbf{B}))$
+\item Given a vector $\textbf{u} \in \mathbb{R}^n$, $rank(\textbf{u}\textbf{u}^T)$ is 1.
+\item Row rank always equals column rank.
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+    \begin{enumerate}[label=(\alph*)]
+        % part 1-a
+        \item Rank of a matrix $\textbf{M}$ is the same as dimension of the range $R(\textbf{M})$ of the matrix.
+    Therefore
+    \begin{equation*}
+        \begin{split}
+            rank(\textbf{AB}) &= dim[R(\textbf{AB})]\\
+            rank(\textbf{A}) &= dim[R(\textbf{A})]
+        \end{split}
+    \end{equation*}
+    $\therefore$ the problem boils down to prove that $rank(\textbf{A}) \leq rank(\textbf{AB})$. Also, if $\textbf{V}$ is a subset of vector space $\textbf{W}$, one can write:
+    \begin{equation*}
+        dim[\textbf{V}] \leq dim[\textbf{W}]
+    \end{equation*}
+    Range of a matrix $\textbf{M}$ is the span of its column vectors. That means any vector $\textbf{y}$ belonging to $R(\textbf{M})$ can be written as a linear combination of the column vectors of $\textbf{M}$.\\
+    If $\textbf{y}$ is a vector belonging to $R(\textbf{AB})$, then $\textbf{y}$ can be written as $\textbf{y} = (\textbf{AB})\textbf{x}$, where $\textbf{x} \in \mathbb{R}^{p}$. Take
+    \begin{equation*}
+        \textbf{z} = \textbf{Bx},~\textbf{z} \in \mathbb{R}^{(n)}
+    \end{equation*}
+    Then, we have $\textbf{y} = \textbf{A(Bx)} = \textbf{Az}$.\\
+    But any vector $\textbf{y'} \in R(\textbf{A})$ also means $\textbf{y'} \in \mathbb{R}^{n \times 1}$. That means, $\textbf{y} \in R(\textbf{A})$ as well.\\
+     If $\textbf{y} \in R(\textbf{AB}) \implies \textbf{y} \in R(\textbf{A})$, it means that $R(\textbf{AB}) \subset R(\textbf{A})$.\\
+    Then it follows from above that 
+    \begin{equation*}
+        \begin{split}
+            rank(\textbf{A}\textbf{B}) &\leq rank(\textbf{A})\\
+            dim[R(\textbf{A}\textbf{B})] &\leq dim[R(\textbf{A})]
+        \end{split}
+    \end{equation*}
+    \\\\
+    % part 1-b
+    \item From \textbf{(a)}, the following result was obtained:
+    \begin{equation*}
+        rank(\textbf{A}\textbf{B}) \leq rank(\textbf{A})
+    \end{equation*}
+    Given the matrix $\textbf{B}$ is non-singular. Thus it is invertible and $\textbf{B}^{-1}$ exists.\\
+    Replacing $\textbf{AB}$ and $\textbf{A}$ in the above equation with $\textbf{(AB)B}^{-1}$ and $\textbf{(AB)}$ respectively, one can write:
+    \begin{equation*}
+        \begin{split}
+            rank(\textbf{(AB)B}^{-1}) \leq rank(\textbf{(AB)})
+        \end{split}
+    \end{equation*}
+    But $\textbf{(AB)B}^{-1} = \textbf{A(B}\textbf{B}^{-1}\textbf{)} = \textbf{AI} = \textbf{A}$. Therefore
+    \begin{equation*}
+        \begin{split}
+            rank(\textbf{A}) \leq rank(\textbf{AB})
+        \end{split}
+    \end{equation*}
+    But in $\textbf{(a)}$, it was already proven that $rank(\textbf{(AB)}) \leq rank(\textbf{A})$. This implies,
+    \begin{equation*}
+        \begin{split}
+            rank(\textbf{AB}) &= rank(\textbf{A})\\
+            dim[R(\textbf{AB})] &= dim[R(\textbf{A})]
+        \end{split}
+    \end{equation*}
+    \\\\
+    % part 1-c
+    \item Using the definitions of $R(\textbf{A}), R(\textbf{B}), N(\textbf{A}), N(\textbf{B})$:
+    \begin{equation*}
+        \begin{split}
+           R(\textbf{A}) &= \{\textbf{y} ~|~ \textbf{Ax} = \textbf{y}, ~\textbf{A} \in \mathbb{R}^{(m \times n)},~ \textbf{x} \in \mathbb{R}^{n},~ \textbf{y} \in \mathbb{R}^{m} \} \\
+           R(\textbf{B}) &= \{\textbf{y} ~|~ \textbf{Bx} = \textbf{y}, ~\textbf{B} \in \mathbb{R}^{(m \times n)},~ \textbf{x} \in \mathbb{R}^{n},~ \textbf{y} \in \mathbb{R}^{m} \} \\
+           N(\textbf{A}) &= \{\textbf{x} ~|~ \textbf{Ax} = \textbf{0}, ~\textbf{A} \in \mathbb{R}^{(m \times n)},~ \textbf{x} \in \mathbb{R}^{n} \} \\
+           N(\textbf{B}) &= \{\textbf{x} ~|~ \textbf{Bx} = \textbf{0}, ~\textbf{B} \in \mathbb{R}^{(n \times p)},~ \textbf{x} \in \mathbb{R}^{p} \}
+        \end{split}
+    \end{equation*}
+
+    Using rank-nullity theorem (proved in \textbf{1.c}), one may write:
+    \begin{equation*}
+        \begin{split}
+            &dim(R(A)) + dim(N(A)) = n\\
+            &dim(R(B)) + dim(N(B)) = p\\
+            &dim(R(AB)) + dim(N(AB)) = p
+        \end{split}
+    \end{equation*}
+    as $A \in \mathbb{R}^{m \times n}$, $B \in \mathbb{R}^{n \times p}$ and $AB \in \mathbb{R}^{m \times p}$.
+    Then we have:
+    \begin{equation*}
+        \begin{split}
+           &dim(N(A)) = n - dim(R(A))\\
+           &dim(N(B)) = p - dim(R(B))\\
+           &dim(N(AB)) = p - dim(R(AB))
+        \end{split}
+    \end{equation*}
+    Substituting this into the given equation,
+    \begin{equation*}
+        \begin{split}
+            &dim[N(AB)] \leq dim[N(A)] + dim[N(B)]\\
+            &\implies p - dim[R(AB)] \leq n - dim[R(A)] + p - dim[R(B)]\\
+            &\implies -dim[R(AB)] \leq -dim[R(A)] -dim[R(B)] + n\\
+            &\implies dim[R(A)] + dim[R(B)] - n \leq dim[R(AB)]\\
+            &\implies rank(A) + rank(B) - n \leq rank(AB)
+        \end{split}
+    \end{equation*}
+    So the given problem boils down to proving this:
+    \begin{equation*}
+        rank(A) + rank(B) - n \leq rank(AB)
+    \end{equation*}
+    But we know that $rank(AB) = rank(B) - dim(N(A) \cap R(B))$\\
+    Note that $N(A) \cap R(B) \subseteq N(A)$\\
+    So, $dim(N(A) \cap R(B)) \leq dim(N(A))$\\
+    $dim(N(A)) \cap R(B)) \leq n - rank(A)$\\
+    But $rank(AB) = rank(B) - dim(N(A) \cap R(B))$\\
+    $\implies rank(AB) \geq rank(A) + rank(B) - n$\\
+
+    Thus it follows that 
+    \begin{equation*}
+        \underline{\underline{dim[N(AB)] \leq dim[N(A)] + dim[N(B)]}}\\
+    \end{equation*}
+
+    %part 1-d
+    \item
+    %part 1-e
+    \item To prove:
+    \begin{equation*}
+        rank(A) + rank(B) - n \leq rank(AB) \leq min{rank(A), rank(B)}
+    \end{equation*}
+    Each column of $AB$ is a combination of the columns of $A$, which implies that $R(AB) \subseteq R(A)$.\\
+    Each row of $AB$ is a combination the rows of $B$, which means rowspace($AB$) $\subseteq$ rowspace($B$), but the dimension of the rowspace = dimension of the column space = rank, so that rank($AB$) $\leq$ rank($B$).\\
+    Therefore,
+    \begin{equation*}
+        rank(AB) \leq min{rank(A), rank(B)}
+    \end{equation*}
+    To show that $rank(A) + rank(B) - n \leq rank(AB)$, let
+    \begin{equation*}
+        \begin{split}
+            &r_B = rank(B)\\
+            &r_A = rank(A)
+        \end{split} 
+    \end{equation*}
+    where $A \in \mathbb{R}^{m \times n}, B \in \mathbb{R}^{n \times p}$.//
+    Now, let $\{v_1, v_2, \dots, v_{r_B}\}$ be a basis set of $R(B)$, and add $n - r_B$ linearly independent vectors $\{w_1, \dots, w_{r_B}\}$ to this basis to span all of $\mathbb{R}^{n}$, {$v_1, v_2, \dots, v_n, w_1, \dots, w_{n-r_B}$}.
+    Let 
+    \begin{equation*}
+       M = (v_1 | v_2 | \dots | v_{r_B}) = (V W)
+    \end{equation*}
+    Suppose $x \in \mathbb{R}^{n}$, then $x = M\alpha$ for some $\alpha \in \mathbb{R}^{n}$.\\
+    The following are known:
+    \begin{equation*}
+        \begin{split}
+            &R(A) = R(AM) = R([AV|AW])\\
+            &R(AB) = R(AV)
+        \end{split}
+    \end{equation*}
+    Using first equation above, it can be observed that the number of linearly independent columns of $A$ is less than or equal to the number of linearly indpendent columns of $AV$ + the number of columns of $AW$, which means that:
+    \begin{equation*}
+        rank(A) \leq rank(AV) + rank(AW)
+    \end{equation*}
+    Using second equation $R(AB) = R(AV)$, we can see that:
+    \begin{equation*}
+        rank(AV) = rank(AB) \rightarrow rank(A) \leq rank(AB) + rank(AW)
+    \end{equation*}
+    yet, there are only $n - r_B$ columns of $AW$. Thus:
+    \begin{equation*}
+        \begin{split}
+            &rank(AW) \leq n - r_B\\
+            &rank(A) - rank(AB) \leq rank(AW) \leq n - r_B\\
+            & r_A - (n - r_B) \leq r_{AB}
+        \end{split}
+    \end{equation*}
+    or $ rank(A) + rank(B) -n \leq rank(AB)$
+    %part 1-f
+    \item Let the matrix formed from $uu^{T}$ be $M$. Then $rank(M) = dim[R(M)]$. $R(M)$ is the same as column space of $M$. So all the possible linear combinations of column vectors of $M$ falls into $R(M)$. But all the column vectors are scaled versions of $u$ alone.
+    \begin{equation*}
+        \begin{split}
+              &uu^{T} = \begin{pmatrix}
+                  &u_1\\
+                  &u_2\\
+                  &\dots\\
+                  &u_n\\
+              \end{pmatrix} \times \begin{pmatrix}
+                  &u_1 &u_2 &\dots &u_n
+              \end{pmatrix}\\
+              &= u1 \times \begin{pmatrix}
+                    &u_1\\                 
+                    &u_2\\                 
+                    &\dots\\                 
+                    &u_n\\                 
+              \end{pmatrix} + u2 \times \begin{pmatrix}
+                    &u_1\\                 
+                    &u_2\\                 
+                    &\dots\\                 
+                    &u_n\\                 
+              \end{pmatrix} + \dots +un \times \begin{pmatrix}
+                    &u_1\\                 
+                    &u_2\\                 
+                    &\dots\\                 
+                    &u_n\\                 
+              \end{pmatrix}
+        \end{split}
+    \end{equation*}
+    Since all the vectors in $R(A)$ can be spanned with just one vector alone, i.e., $u$, $dim[R(uu^{T})] = 1$ or $rank(uu^{T}) = 1$.
+    %part 1-g 
+    \item
+    We write $A=(a_{ij})$ and let
+    $\mathbf{A}_i=\begin{bmatrix} 
+      a_{1i} \\ 
+       a_{2i} \\ 
+        \cdots \\ 
+       a_{mi} 
+       \end{bmatrix}$
+    be the i-th column vector of $A$ for $i=1,2,\dots, n$.
+    Also let
+    $\mathbf{B}_i=\begin{bmatrix} 
+      a_{i1} \\ 
+       a_{i2} \\ 
+        \cdots \\ 
+       a_{in} 
+       \end{bmatrix}$
+    be the ith column vector of $A^{T}$ for $i=1,2, \dots, m$, that is $B_i$ is the transpose of the ith row vector of $A$.
+    Suppose that $rank(A)=dim(R(A^{T}))=k$ and let $\{\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_k\}$ be a basis for the range $R(A^{T})$.
+    We write
+    $\mathbf{v}_{i}=\begin{bmatrix} 
+      v_{i1} \\ 
+       v_{i2} \\ 
+        \vdots \\ 
+       v_{in} 
+       \end{bmatrix}$
+    for $i=1,2, \dots, k$.
+    Then each column vector $\mathbf{B}_i$ of $A^{T}$ is a linear combination of $\{\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_k\}$. Thus we have
+    \begin{align*} 
+    \mathbf{B}_1 &=c_{11}\mathbf{v}_1+\cdots+c_{1k}\mathbf{v}_k\\ 
+    \mathbf{B}_2 &=c_{21}\mathbf{v}_1+\cdots+c_{2k}\mathbf{v}_k\\ 
+    \vdots\\ 
+    \mathbf{B}_m &=c_{m1}\mathbf{v}_1+\cdots+c_{mk}\mathbf{v}_k. 
+    \end{align*}
+    
+    More explicitly we have,
+    \begin{align*} 
+    \begin{bmatrix} 
+      a_{11} \\ 
+       a_{12} \\ 
+        \cdots \\ 
+       a_{1n} 
+       \end{bmatrix} &=c_{11}\begin{bmatrix} 
+      v_{11} \\ 
+       v_{12} \\ 
+        \vdots \\ 
+       v_{1n} 
+       \end{bmatrix}+\cdots+c_{1k}\begin{bmatrix} 
+      v_{k1} \\ 
+       v_{k2} \\ 
+        \vdots \\ 
+       v_{kn} 
+       \end{bmatrix}\\ 
+    \begin{bmatrix} 
+      a_{21} \\ 
+       a_{22} \\ 
+        \cdots \\ 
+       a_{2n} 
+       \end{bmatrix} &=c_{21}\begin{bmatrix} 
+      v_{11} \\ 
+       v_{12} \\ 
+        \vdots \\ 
+       v_{1n} 
+       \end{bmatrix}+\cdots+c_{2k}\begin{bmatrix} 
+      v_{k1} \\ 
+       v_{k2} \\ 
+        \vdots \\ 
+       v_{kn} 
+       \end{bmatrix}\\ 
+       \vdots\\ 
+    \begin{bmatrix} 
+      a_{m1} \\ 
+       a_{m2} \\ 
+        \cdots \\ 
+       a_{mn} 
+       \end{bmatrix} &=c_{m1}\begin{bmatrix} 
+      v_{11} \\ 
+       v_{12} \\ 
+        \vdots \\ 
+       v_{1n} 
+       \end{bmatrix}+\cdots+c_{mk}\begin{bmatrix} 
+      v_{k1} \\ 
+       v_{k2} \\ 
+        \vdots \\ 
+       v_{kn} 
+       \end{bmatrix}\\ 
+    \end{align*}
+    
+    Now, we look at the i-th entries for the above vectors and we have
+    \begin{align*} 
+    a_{1i}&=c_{11}v_{1i}+\cdots+c_{1k}v_{ki}\\ 
+    a_{2i}&=c_{21}v_{1i}+\cdots+c_{2k}v_{ki}\\ 
+    \vdots \\ 
+    a_{mi}&=c_{m1}v_{1i}+\cdots+c_{mk}v_{ki}\\. 
+    \end{align*}
+    
+    We rewrite these as a vector equality and obtain
+    \begin{align*} 
+    \mathbf{A}_i&=\begin{bmatrix} 
+      a_{1i} \\ 
+       a_{2i} \\ 
+        \cdots \\ 
+       a_{mi} 
+       \end{bmatrix}=v_{1i}\begin{bmatrix} 
+      c_{11} \\ 
+       c_{21} \\ 
+        \vdots \\ 
+       c_{m1} 
+       \end{bmatrix}+\cdots +v_{ki}\begin{bmatrix} 
+      c_{1k} \\ 
+       c_{2k} \\ 
+        \vdots \\ 
+       c_{mk} 
+       \end{bmatrix}\\ 
+       &=v_{1i}\mathbf{c}_{1}+\cdots+v_{ki}\mathbf{c}_k, 
+    \end{align*}
+    
+    where we put
+    $c_j=\begin{bmatrix} 
+      c_{1j} \\ 
+       c_{2j} \\ 
+        \vdots \\ 
+       c_{mj} 
+       \end{bmatrix}$
+    for $j=1,2,\dots,k$.
+    
+    This shows that any column vector $\mathbf{A}_i$ of $A$ is a linear combination of vectors $\mathbf{c}_1, \dots, \mathbf{c}_k$. Therefore we have
+    $R(A)=\{\mathbf{A}_1, \dots, \mathbf{A}_n\} \subset \{\mathbf{c}_1, \dots, \mathbf{c}_k\}$.
+    Since the dimension of a subspace is smaller than or equal to the dimension of a vector space containing it, we have
+    $rank(A)=dim(R(A)) \leq dim(\{\mathbf{c}_1, \dots, \mathbf{c}_k\}) \leq k.$
+    Hence we obtain
+    $rank(A) \leq rank(A^{T}).$
+    
+    To achieve the opposite inequality, we repeat this argument using $A^{T}$, and we obtain
+
+    $rank(A^{T}) \leq rank((A^{T})^{T})=rank(A)$
+    since we have $(A^{T})^{T}=A.$
+    
+    Therefore, required equality is proved: 
+    $rank(A)=rank(A^{T}).$ or row rank equals column rank.
+    \end{enumerate}
+\end{solution}
+
+\newpage
+\begin{problem}{2}
+\textbf{[10 marks]} Suppose there always exists a set of real coefficients $c_1, c_2, c_3, \dots, c_{10}$ for any set of real numbers $d_1, d_2, d_3, \dots, d_{10}$
+\begin{equation*}
+    \sum_{j=1}^{10} c_j f_j(i) = d_i
+\end{equation*}
+for $i \in {1,2,\dots 10}$, where $f_1, f_2, f_3, \dots f_{10}$ are a set of functions defined on the interval [1, 10].
+\begin{enumerate}[label=(\alph*)]
+    \item Use the concepts discussed in class to show that $d_1, d_2, d_3, \dots d_{10}$ determine $c_1, c_2, c_3, \dots c_{10}$ uniquely.
+    \item Let \textbf{A} be a $10 \times 10$ matrix representing the linear mapping from data $d_1, d_2, \dots, d_10$ to coefficients $c_1, c_2, c_3, \dots, c_{10}$. What is the $i,j$th entry of $\textbf{A}^{-1}$?
+\end{enumerate}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+\newpage
+\begin{problem}{3}
+\textbf{[15 marks]} A matrix $\textbf{S}$ is said to be symmetric if $\textbf{S}^T = \textbf{S}$ and skew-symmetric if $\textbf{S}^T = -S$. Now verify the following:
+\begin{enumerate}[label=(\alph*)]
+    \item The matrix $\textbf{Q} = \textbf{(I - S)}^{-1}\textbf{(I + S)}$ is an orthogonal matrix for any skew-symmetric matrix $\textbf{S}$.
+    \item Note that a symmetric matrix $\textbf{A} \in \mathbb{R}^{m \times m}$ can be decomposed as $\textbf{QDQ}^T$ where $Q$ is an orthogonal matrix and $\textbf{D}$ is a diagonal matrix. Using this result, show that $\textbf{u}^T\textbf{Au} = 0 ~\forall~ \textbf{u} \in \mathbb{R}^{m}$, if and only if $\textbf{A} = 0$.
+    \item Show that $\textbf{u}^T\textbf{Su} = 0 ~\forall~ \textbf{u} \in \mathbb{R}^{m}$ if and only if $\textbf{S}$ is a skew-symmetric matrix.  
+\end{enumerate}
+\end{problem}
+\begin{solution}
+    \begin{enumerate}[label=(\alph*)]
+        %part 3-a
+        \item 
+        \begin{equation*}
+            \begin{split}
+               Q &= (I - S)^{-1}(I + S)\\
+               Q^{T} &= ((I - S)^{-1}(I + S))^{T}\\
+               &= (I + S)^{T}((I - S)^{-1})^{T}\\
+               &= (I + S^{T})((I - S)^{T})^{-1}\\
+               &= (I - S)(I + S)^{-1}\\
+               Q^{T}Q &= (I - S)((I + S)^{-1}(I + S)((I - S)^{-1}\\
+               &= (I - S)I(I - S)^{-1}\\
+               &= (I - S)(I - S)^{-1}\\
+               &= I
+            \end{split}
+        \end{equation*}
+        For invertible $Q$,
+        \begin{equation*}
+            \begin{split}
+                &Q^{T} Q Q^{-1} = I Q^{-1}\\
+                &\underline{\underline{Q^{T} = Q^{-1}}}
+            \end{split}
+        \end{equation*}
+        Thus we've shown that $Q^{T}Q  = I$. Similarly it can be shown that $QQ^{T} = I$. That means $Q$ is an orthogonal matrix for any skew-symmetric matrix $S$.
+
+        %part 3-b
+        \item
+        If $A = 0$, then it follows trivially that $u^{T}Au = 0$.\\
+        If $A$ be a symmetric matrix, then,
+        \begin{equation*}
+            \begin{split}
+                u^{T}Au &= u^{T}QDQ^{T}u\\
+                &= (Q^{T}u)^{T}D(Q^{T}u)\\
+                &= \sum_{i=1}^{m}d_{i,i}(q_{i}^{T}u)^{2}\\
+            \end{split}
+        \end{equation*}
+
+        The above sum is zero only if all the $d_{i,i}$ were 0. Then $QDQ^{T} = 0$ and in turn, $A = 0$.
+
+        %part 3-c
+        \item To prove: $u^{T} S u = 0 \forall u \in \mathbb{R}^{m}$ if and only if S is a skew-symmetric matrix.\\
+        Let $u^{T} S u = 0 \forall u \in \mathbb{R}^{m}$.\\
+        Then,
+        \begin{equation*}
+            \begin{split}
+                &u^{T} S u = \sum_{i}^{m}\sum_{j}^{m}u_{j}s_{i,j}u_{i} = 0 \forall u\\
+                &\implies u_{1}^{2}s_{1,1} + u_{1}s_{1,2}u_{2} + \dots  = 0\\
+                &\implies (u_{1}^{2}s_{1,1} + u_{2}^{2} s_{2,2} + u_{3}^{2}s_{3,3} + \dots + u_{m}^{2}s_{m,m})+ (u_{1}u_{2}s_{1,2} + u_{2}u_{1}s_{2,1} + \dots) = 0\\
+            \end{split}
+        \end{equation*}
+        It is given that $u^{T}Su = 0$. Inorder to obtain this, all $s_{i,i}$ must be zero as well as $s_{i,j} = -s_{j,i}$. Thus $S$ is skew-symmetric.\\
+        Now consider that $S$ is skew-symmetric. Then,\\
+        since $u^{T}Su$ is a scalar, $u^{T}Su = (u^{T}Su)^{T}$
+        \begin{equation*}
+            \begin{split}
+                u^{T} S u &= (u^{T}Su)^{T}\\
+                &= u^{T}S^{T}(u^{T})^{T}\\
+                &= u^{T}S^{T}u\\
+                &= -u^{T}Su\\
+                \implies &u^{T}Su = - u^{T}Su\\
+                \implies &2 u^{T}Su = 0\\
+                &u^{T}Su = 0
+            \end{split}
+        \end{equation*}
+        Thus it is proved that $S$ being skew-symmetric implies $u^{T}Su = 0$. This proves that $u^{T}Su = 0 \forall u \in \mathbb{R}^{m}$, if and only if $S$ is a skew-symmetric matrix.\\
+    \end{enumerate}
+\end{solution}
+
+\newpage
+\begin{problem}{4}
+\textbf{[35 marks} If $\textbf{x} \in \mathbb{R}^{m \times n}$, then show the following:
+\begin{enumerate}[label=(\alph*)]
+    \item $||\textbf{x}||_{\infty} \leq ||\textbf{x}||_{2}$
+    \item $||\textbf{x}||_{2} \leq \sqrt{m}||\textbf{x}||_{\infty}$
+    \item $||\textbf{A}||_{\infty} \leq \sqrt{n}||\textbf{A}||_{2}$
+    \item $||\textbf{A}||_{2} \leq \sqrt{m}||\textbf{A}||_{\infty}$
+    \item $||\textbf{A}||_{F} \leq \sqrt{tr(\textbf{A}^T\textbf{A})}$
+    \item $\frac{1}{\sqrt{m}} || \textbf{A}||_1 \leq || \textbf{A}||_2 \leq \sqrt{n}|| \textbf{A} ||_1$
+    \item $|| \textbf{A}||_2 \leq \sqrt{|| \textbf{A}||_1 || \textbf{A}||_{\infty}}$
+\end{enumerate}
+    Give an example of a non-zero vector or matrix for which equality is achieved in the above inequalities.
+\end{problem}
+\begin{solution}
+    \begin{enumerate}[label=(\alph*)]
+        %part 4-a
+        \item Given,
+        \begin{equation*}
+            \begin{split}
+                ||x||_{\infty} &= max_{1 \leq i \leq m} |x_i|\\
+                ||x||_{2} &= (\sum_{i=1}^{m}|x_i|^{2})^{\frac{1}{2}}\\
+                &= \sqrt{x^{T}x}
+            \end{split}
+        \end{equation*}
+        To prove: $||x||_{\infty} \leq ||x||_{2}$\\
+        Let $max_{1 \leq i \leq m}  ||x_i|| = x_k$, where $k$ is a natural number between $1$ and $m$ included.\\
+        \begin{equation*}
+            \begin{split}
+                &|x_k| \leq \sum_{i=1}^{m}|x_i|^{2})^{\frac{1}{2}}\\
+                &(|x_k|^{2}) \leq \sum_{i=1}^{m}|x_i|^{2})\\
+                &|x_k|^2 \leq |x_1|^{2} +|x_2|^{2} + \dots + |x_k|^{2} + \dots |x_m|^{2}\\
+                &0 \leq \sum_{i = 1, i \neq k}^{m} |x_i|^{2}
+            \end{split}
+        \end{equation*}
+        which is true if $x \in \mathbb{R}^{m}$ as $x_{i}s \in \mathbb{R}$.\\
+        Thus the starting assumption that $||x||_{\infty} = max_{1 \leq i \leq m} |x_i|$ is true.
+
+        %part 4-b
+        \item To prove:
+        \begin{equation*}
+            || x ||_{2} \leq \sqrt{m} || x ||_{\infty}
+        \end{equation*}
+        Let $max_{1 \leq i \leq m}  ||x_i|| = x_k$, where $k$ is a natural number between $1$ and $m$ included.\\
+        Assume the above equation is true.
+        \begin{equation*}
+            \begin{split}
+                &|| x ||_{2} \leq \sqrt{m} || x ||_{\infty}\\
+                &(\sum_{i=1}^{m}| x_i |^{2})^{1/2} \leq \sqrt{m} | x_k|\\
+                &\sum_{i=1}^{m}| x_i |^{2} \leq m | x_k|^{2}\\
+            \end{split}
+        \end{equation*}
+        But since $x_k \geq x_i, 1 \leq i \leq m$, 
+        \begin{equation*}
+            \begin{split}
+                &\sum_{i = 1}^{m} x_{k}^{2} \geq \sum_{i = 1}^{m} x_{i}^{2}\\
+                &m x_{k} \geq \sum_{i = 1}^{m} x_{i}^2
+            \end{split}
+        \end{equation*} 
+        Thus it follows that
+        \begin{equation*}
+            \underline{\underline{|| x ||_{2} \leq \sqrt{m} || x ||_{\infty}}}
+        \end{equation*}
+        % part 4-c
+        \item
+        % part 4-d
+        \item
+        %part 4-e
+        \item 
+        To prove: $||A_F|| = \sqrt{tr(A^{T}A)}$.
+        \begin{equation*}
+            \begin{split}
+                &||A_F||^{2} = \sum_{j=1}^{n}|| a_j||_2^{2}\\
+                &|| a_j ||_{2} = \sum_{j=1}^{n}(\sum_{i=1}^{n}| a_{ji}|^{2})\\
+                &=\sum_{i,j}a_{ij}^{2}\\
+                &= \sum_{i=1}^{n}(\sum_{j=1}^{n}a_{ij}^{T}a_{ji})\\
+                &=\sum_{i=1}^{n}(A^{T}A)_{ii}\\
+                &= tr(A^{T}A)\\
+                &\implies ||A_F|| = \sqrt{tr(A^{T}A)}
+            \end{split}
+        \end{equation*}
+        %part 4-f
+        \item
+        %part 4-g
+        \item To prove:
+        \begin{equation*}
+            || A||_{2} \leq \sqrt{||A||_{1} ||A||_{\infty}}
+        \end{equation*}
+        If $z \neq 0$ is such that $A^{T}Az = \mu^{2}z$ with $\mu = ||A||_{2}$,\\
+         then $\mu^{2}||z||_{1} = || A^T A z ||_1 \leq ||A^{T}||_{1} ||A||_{1} ||z||_{1} = ||A^{T}||_{\infty} ||A||_{1} ||z||_{1}$
+        %part 4-h
+        \item
+    \end{enumerate}
+\end{solution}
+
+\newpage
+\begin{problem}{5}
+\textbf{[10 marks]} Induced matrix norm is defined as $||\textbf{A}||^{(m,n)} = max|| \textbf{Ax}||^{m}$, where $\textbf{x} \in \mathbb{R}^n$ and is a unit vector. $||.||$ corresponds to p-norm ($1 \leq p < \infty$). For this exercise, let us consider $p$ to be natural number.\\\\
+Using MATLAB/ Octave/ Python programming environment, create a matrix using $\textbf{A} = randn(100,2)$. Subsequently, create random unit vectors $\textbf{x}$ using $temp = randn(2,1)$ and normalize $\textbf{x}$ using $x =\frac{temp}{norm(temp)}$. Checking for multiple random vectors $\textbf{x}$ (use a loop and check for about 1000 random vectors $\textbf{x}$) using $norm_of_Ax = norm(\textbf{Ax}, p)$ for $p = 1,2,3,4,5,6,\infty$. What is the maximum value of p-norm for the vector $\textbf{Ax}$? Now calculate p-norm of $\textbf{A}$ using $norm_of_A = norm(\textbf{A},p)$ for $p = 1,2, \infty$ within the same programming environment you used before. Verify the equality $|| \textbf(A)||^{(m)}$ for $p = 1,2,\infty$. Note that this equality is true for other values of $p$ as well but you are restricting to $p = 1,2,\infty$ in this exercise.
+\end{problem}
+\begin{solution}
+
+    Programming environment of choice was Python (3.9.6).
+\lstinputlisting[language=Python]{ds284_assignment_02.py}
+The following output was obtained:
+\begin{verbatim}
+    NORM 		A_norm Ax_norm
+inf-norm	4.843	3.635
+  1-norm	93.035	93.035
+  2-norm	11.358	11.358
+\end{verbatim}
+Observation: 1-norms and 2-norms showed excellent matching with 1000 random unit vectors, but $\infty$-norms showed non-negligible difference. With larger sample size for unit vectors, favourable matching was noted for $\infty$-norm.
+\end{solution}
+\end{document}
